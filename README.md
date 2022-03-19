@@ -12,3 +12,8 @@
 * Google Cloud SDK [https://cloud.google.com/sdk/docs/install]
 * Microsoft Powershell [https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell]
 * Google Cloud Internet Access Proxy [https://cloud.google.com/architecture/building-internet-connectivity-for-private-vms]
+* To increase the performance of the tunnel, consider installing NumPy. To install
+NumPy, see: [https://numpy.org/install/]
+After installing NumPy, run the following command in Powershell to allow gcloud to access
+external packages:
+  $env:CLOUDSDK_PYTHON_SITEPACKAGES=1
