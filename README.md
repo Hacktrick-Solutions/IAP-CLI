@@ -1,35 +1,14 @@
 # Google Cloud Internet Access Proxy Command Line Tool #
 
-
-
 ## Overview ##
 
-* With no official tools available from Google and the IAP Desktop tool only available for Windows and limited to SSH and RDP tunnels only. Our team needed a cross platform tool to connect local administration tools such as SQL Studio Manager/PGAdmin etc to our virtual machines securely via the Internet Access Proxy.
+* With no official tools available from Google and the IAP Desktop tool only available for Windows and limited to SSH and RDP tunnels only. My client's development team needed a cross platform tool to connect local administration tools such as SQL Studio Manager or PGAdmin etc to our virtual machines securely via the Internet Access Proxy. They also wanted the ability to use the local Windows Remote Desktop tool and local Visual Studio connected via SSH.
 * Title:  EZYiD Google Cloud Internet Access Proxy
 * Author: Ricky Elsum
 * Language: Powershell
-* 
 
 ## Requirements ##
-* Google Cloud SDK https://cloud.google.com/sdk/docs/install
-* Microsoft Powershell
 
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
-
-### Who do I talk to? ###
-
-* Ricky Elsum - EZYiD Senior Cloud Systems Engineer - ricky.elsum@ezyid.com
-* Karthik - EZYiD Senior Lead Developer - 
+* Google Cloud SDK [https://cloud.google.com/sdk/docs/install]
+* Microsoft Powershell [https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell]
+* Google Cloud Internet Access Proxy [https://cloud.google.com/architecture/building-internet-connectivity-for-private-vms]
