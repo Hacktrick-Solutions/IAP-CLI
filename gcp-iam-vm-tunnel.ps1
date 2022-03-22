@@ -24,48 +24,43 @@ $Local_MSSQL_Port = '1533'
 
 #1 Development Server Windows Server 2019 RDP
 $host1 = 'example-windows-vm-dev' # Change to set your Google Compute Engine VM's You need to connect to. 
-$zone1 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone1 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port1 = $Remote_RDP_Port
 
 #2 Production SQL Server 2019 Windows Server 2019 RDP
 $host2 = 'example-msssql-instance-1' # Change to set your Google Compute Engine VM's You need to connect to. 
-$zone2 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone2 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port2 = $Remote_RDP_Port
 
 #3 ASP.NET Webserver Windows Server 2019 RDP
 $host3 = 'example-iis-windowsvm-1' # Change to set your Google Compute Engine VM's You need to connect to. 
-$zone3 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone3 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port3 = $Remote_RDP_Port
 
 #4 Postgres Notification Scheduler SSH 
 $host4 = 'scheduler-dev' # Change to set your Google Compute Engine VM's You need to connect to. 
-$zone4 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone4 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port4 = $Remote_SSH_Port
 
 #5 Example Wordpress Webserver Ubuntu 20.04 SSH
 $host5 = 'example-wp-vm-1' # Change to set your Google Compute Engine VM's You need to connect to. 
-$zone5 = 'australia-southeast2-a'  # Change to suit the Zone your Compute Engine Resides In
+$zone5 = 'australia_southeast2_a'  # Change to suit the Zone your Compute Engine Resides In
 $port5 = $Remote_SSH_Port
 
 #6 EZYiD Notification Scheduler Postgres
 $host6 = 'scheduler-dev' # Change to set your Google Compute Engine VM's You need to connect to
-$zone6 = 'us-central1-a'  # Change to suit the Zone your Compute Engine Resides In
+$zone6 = 'us_central1_a'  # Change to suit the Zone your Compute Engine Resides In
 $port6 = $Remote_Postgres_Port
 
 #7 EZYiD Production SQL Studio Manager MS SQL Server 2019
 $host7 = 'sql-instance-2' # Change to set your Google Compute Engine VM's You need to connect to
-$zone7 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone7 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port7 = $Remote_MSSQL_Port
 
 #8 EZYiD Development SQL Studio Manager MS SQL Server 2019
 $host8 = 'ezyid-dev-us' # Change to set your Google Compute Engine VM's You need to connect to
-$zone8 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
+$zone8 = 'us_central1_a' # Change to suit the Zone your Compute Engine Resides In
 $port8 = $Remote_MSSQL_Port
-
-#9 EZYiD Development SQL Studio Manager MS SQL Server 2019
-$host9 = 'scheduler-postgres-prod-1' # Change to set your Google Compute Engine VM's You need to connect to
-$zone9 = 'us-central1-a' # Change to suit the Zone your Compute Engine Resides In
-$port9 = $Remote_Postgres_Port
 
 ####### ========================================== #######
 # Main menu, allowing user selection
@@ -84,7 +79,6 @@ function Show-Menu {
     Write-Host "6: Press '6' to Start POSTGRES Tunnel to $host6"
     Write-Host "7: Press '7' to Start MS SQL Tunnel to $host7"
     Write-Host "8: Press '8' to Start MS SQL Tunnel to $host8"
-    Write-Host "9: Press '9' to Start POSTGRES Tunnel to $host9"
     Write-Host "Q: Press 'Q' to quit."
 }
 
@@ -122,10 +116,6 @@ Function iap_ezyid_dev_us_mssql{
     gcloud compute start-iap-tunnel $host8 $port8 --local-host-port=localhost:$Local_MSSQL_Port --zone=$zone8
 }
 
-Function iap_prod_pgadmin{
-    gcloud compute start-iap-tunnel $host9 $port9 --local-host-port=localhost:$Local_Postgres_Port --zone=$zone9
-}
-
 ####### ========================================== #######
 # Main menu loop
 do {
@@ -141,7 +131,6 @@ do {
         '6' {iap_scheduler_dev_pgadmin}
         '7' {iap_sqlinstance_2_mssql}
         '8' {iap_dev_us_mssql}
-        '9' {iap_prod_pgadmin}
         'q' {break} # do nothing
         default{
             Write-Host "You entered '$input'" -ForegroundColor Red
