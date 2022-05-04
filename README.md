@@ -29,5 +29,4 @@
 
 ### Who do I talk to? ###
 
-* Ricky Elsum - EZYiD Senior Cloud Systems Engineer - ricky.elsum@ezyid.com
-* Karthik - EZYiD Senior Lead Developer - 
+* Ricky Elsum  projects@hacktrick.com.au
