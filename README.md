@@ -11,21 +11,7 @@
 
 * Google Cloud SDK 'https://cloud.google.com/sdk/docs/install'
 * Microsoft Powershell
-
-### How do I get set up? ###
-
-* Summary of set up
-* Configuration
-* Dependencies
-* Database configuration
-* How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-
-* Writing tests
-* Code review
-* Other guidelines
+* Google Cloud IAP deployed and configure 'https://cloud.google.com/architecture/building-internet-connectivity-for-private-vms'
 
 ### Who do I talk to? ###
 
