@@ -11,7 +11,7 @@
 
 * Google Cloud SDK 'https://cloud.google.com/sdk/docs/install'
 * Microsoft Powershell
-* Google Cloud IAP deployed and configure 'https://cloud.google.com/architecture/building-internet-connectivity-for-private-vms'
+* Google Cloud IAP deployed and configured 'https://cloud.google.com/architecture/building-internet-connectivity-for-private-vms'
 
 ### Who do I talk to? ###
 
